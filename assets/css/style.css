@@ -1817,6 +1817,284 @@ h2.review-title {
   .review-helpful-bar { padding: 16px 22px; }
 }
 
+/* ============ FOOTER (SEO 강화 v2) ============ */
+.site-footer {
+  background: #050505;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-dim);
+  position: relative;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-dark) 20%,
+    var(--accent-bright) 50%,
+    var(--accent-dark) 80%,
+    transparent 100%);
+  opacity: 0.7;
+}
+
+/* 푸터 사이트맵 (모든 페이지) */
+.footer-sitemap {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+.footer-sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px;
+}
+.sitemap-col .footer-section-title {
+  color: var(--text);
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-bottom: 10px;
+}
+.sitemap-col .footer-section-title::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 24px; height: 2px;
+  background: linear-gradient(90deg, var(--accent-bright), var(--accent-dark));
+  border-radius: 1px;
+}
+.sitemap-col ul li { margin-bottom: 9px; }
+.sitemap-col ul li a {
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.6;
+  transition: color var(--transition);
+  text-decoration: none;
+}
+.sitemap-col ul li a:hover { color: var(--accent-bright); }
+
+/* 정보 영역 4col 그리드 */
+.footer-inner {
+  padding: 56px 0 44px;
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 1fr 0.9fr;
+  gap: 44px;
+}
+.footer-col p { margin-bottom: 8px; line-height: 1.75; }
+.footer-col strong { color: var(--text); font-weight: 700; }
+.footer-section-title {
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.footer-col a { color: var(--text-dim); transition: color var(--transition); }
+.footer-col a:hover { color: var(--accent-bright); }
+
+/* 브랜드 영역 */
+.footer-brand {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.footer-brand .logo-accent { color: var(--accent); }
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+/* 소셜·CTA 채널 버튼 */
+.footer-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.footer-channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: 1px solid var(--border);
+}
+.footer-channel.kakao {
+  background: var(--kakao);
+  color: var(--kakao-text);
+  border-color: var(--kakao);
+}
+.footer-channel.kakao:hover { color: var(--kakao-text); opacity: 0.92; }
+.footer-channel.phone {
+  background: rgba(212, 173, 106, 0.08);
+  color: var(--accent-bright);
+  border-color: rgba(212, 173, 106, 0.25);
+}
+.footer-channel.phone:hover { color: var(--accent-bright); background: rgba(212, 173, 106, 0.15); }
+.footer-channel .icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* 매장 정보 NAP 강조 */
+.footer-nap {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.footer-nap-item {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.footer-nap-item .nap-icon {
+  color: var(--accent);
+  font-size: 14px;
+  padding-top: 1px;
+}
+.footer-nap-item .nap-value { color: var(--text-soft); }
+.footer-nap-item .nap-value strong { color: var(--text); }
+.footer-nap-item.is-hours .nap-value {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* "지금 영업 중" 동적 표시 (CSS만으로는 시간 판단 불가하나 정적 표시) */
+.footer-open-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(74, 222, 128, 0.12);
+  color: #6ee7a4;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  letter-spacing: 0.06em;
+}
+.footer-open-status::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #6ee7a4;
+  animation: pulse 2s infinite;
+}
+
+/* 사업자 정보 */
+.footer-business p {
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--text-dim);
+}
+.footer-business .biz-line {
+  display: flex;
+  gap: 6px;
+}
+.footer-business .biz-line .biz-label {
+  color: var(--text-dim);
+  flex-shrink: 0;
+  min-width: 60px;
+}
+.footer-business .biz-line .biz-value { color: var(--text-soft); }
+
+/* 빠른 메뉴 (인라인 링크) */
+.footer-quick-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-quick-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-soft);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition);
+  width: fit-content;
+}
+.footer-quick-menu a:hover {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent-dark);
+}
+.footer-quick-menu a::before {
+  content: '→';
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+/* 하단 영역 */
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 22px 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.footer-bottom .legal-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-bottom .legal-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-bottom .legal-links a:hover { color: var(--accent-bright); }
+.footer-bottom .legal-divider { color: var(--border-strong); }
+.footer-bottom .age-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  background: rgba(244, 96, 96, 0.12);
+  border: 1px solid rgba(244, 96, 96, 0.25);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ff8e8e;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1024px) {
+  .footer-sitemap-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+}
+@media (max-width: 720px) {
+  .footer-sitemap { padding: 48px 0 32px; }
+  .footer-sitemap-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
+  .footer-inner { grid-template-columns: 1fr; padding: 40px 0 32px; gap: 36px; }
+  .footer-bottom .container { flex-direction: column; text-align: center; }
+}
+
 /* ============ NOTICE LIST ============ */
 .notice-list {
   display: flex;
