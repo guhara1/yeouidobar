@@ -1719,13 +1719,13 @@ body {
 padding-bottom: 72px;
 }
 .mobile-cta-bar {
-display: grid;
-grid-template-columns: 1fr;
+display: flex;
 gap: 0;
 position: fixed;
 bottom: 0;
 left: 0;
 right: 0;
+width: 100%;
 z-index: 95;
 background: rgba(10, 10, 10, 0.94);
 backdrop-filter: blur(16px) saturate(180%);
@@ -1747,15 +1747,17 @@ transparent 100%);
 z-index: 1;
 }
 .mobile-cta-bar a {
+flex: 1 1 100%;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 11px;
+gap: 12px;
 text-decoration: none;
 font-weight: 700;
 transition: all 0.18s ease;
 position: relative;
-padding: 0 14px;
+padding: 0 16px;
 }
 .mobile-cta-bar a:active { transform: scale(0.96); }
 .mobile-cta-bar .cta-phone {
@@ -1768,7 +1770,7 @@ color: #1a1410;
 border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 .mobile-cta-bar .cta-icon {
-font-size: 22px;
+font-size: 24px;
 line-height: 1;
 flex-shrink: 0;
 filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
@@ -1781,16 +1783,16 @@ line-height: 1.15;
 gap: 1px;
 }
 .mobile-cta-bar .cta-label strong {
-font-size: 14px;
+font-size: 15px;
 font-weight: 900;
 letter-spacing: -0.01em;
 }
 .mobile-cta-bar .cta-label small {
-font-size: 10.5px;
+font-size: 12px;
 font-weight: 700;
-opacity: 0.78;
+opacity: 0.85;
 font-feature-settings: 'tnum';
-letter-spacing: 0.01em;
+letter-spacing: 0.02em;
 }
 }
 @supports (padding: max(0px)) {
