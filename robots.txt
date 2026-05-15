@@ -1,12 +1,72 @@
 # 여의도 라운지 robots.txt
-# 모든 검색엔진 허용, 단 일부 경로 제한
+# 모든 주요 검색엔진 봇 명시적 허용, 크롤 우선
 
+# ===== 글로벌 검색엔진 =====
 User-agent: *
 Allow: /
 Disallow: /404.html
 
-# AI 학습 크롤러 — 차단을 원하지 않으면 주석 해제하지 마세요
-# 정책상 정보성 콘텐츠 인덱싱은 허용하되 학습용 크롤링은 별도 처리
+# ===== Google =====
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# ===== Naver (한국) =====
+User-agent: Yeti
+Allow: /
+Crawl-delay: 0
+
+User-agent: NaverBot
+Allow: /
+Crawl-delay: 0
+
+# ===== Daum/Kakao (한국) =====
+User-agent: Daum
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+# ===== Bing/Microsoft =====
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+
+# ===== 기타 주요 검색엔진 =====
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ===== AI 학습 크롤러 (허용) =====
 User-agent: GPTBot
 Allow: /
 
@@ -19,8 +79,15 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# 사이트맵
-Sitemap: https://yeouidobar.example.com/sitemap.xml
+User-agent: ClaudeBot
+Allow: /
 
-# 호스트
-Host: yeouidobar.example.com
+User-agent: PerplexityBot
+Allow: /
+
+# ===== 사이트맵 =====
+Sitemap: https://yeouidobar.com/sitemap.xml
+Sitemap: https://yeouidobar.com/rss.xml
+
+# ===== 호스트 =====
+Host: yeouidobar.com

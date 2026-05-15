@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>여의도 라운지 — 새 소식·후기·이벤트</title>
+    <link>https://yeouidobar.com/</link>
+    <atom:link href="https://yeouidobar.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>여의도역 도보 3분, 분위기 좋은 프리미엄 BAR. 매장 공지·이벤트·실제 손님 후기를 빠르게 받아보세요.</description>
+    <language>ko-KR</language>
+    <copyright>© 2026 여의도 라운지</copyright>
+    <pubDate>Fri, 15 May 2026 09:00:00 +0900</pubDate>
+    <lastBuildDate>Fri, 15 May 2026 09:00:00 +0900</lastBuildDate>
+    <generator>여의도 라운지 RSS 1.0</generator>
+    <image>
+      <url>https://yeouidobar.com/assets/images/og-cover.svg</url>
+      <title>여의도 라운지</title>
+      <link>https://yeouidobar.com/</link>
+    </image>
+    <category>Bars and Lounges</category>
+    <category>여의도</category>
+    <category>착석바·토킹바</category>
+    <ttl>60</ttl>
+
+    <!-- 최근 후기 (3건) -->
+    <item>
+      <title>팀 6명 회식 2차 처음 방문 — 단체 응대 정말 매끄러웠습니다</title>
+      <link>https://yeouidobar.com/visit-reviews/team-dinner/</link>
+      <guid isPermaLink="true">https://yeouidobar.com/visit-reviews/team-dinner/</guid>
+      <pubDate>Tue, 05 May 2026 12:00:00 +0900</pubDate>
+      <dc:creator>정민호</dc:creator>
+      <category>방문 후기</category>
+      <category>단체 회식</category>
+      <description>금요일 저녁 가장 붐비는 시간대인데도 단체 룸이 사전 안내대로 준비되어 있었습니다. 1차 종료 30분 지연도 카카오톡 한 번에 매끄럽게 조정되었고, 단체라고 음악을 시끄럽게 만들지 않아서 좋았습니다. 무알콜 메뉴 별도 추가 비용 없이 준비, 강남구 대리비 사전 안내까지.</description>
+    </item>
+
+    <item>
+      <title>회식 2차로 다녀온 솔직 후기 — 부서 회식 또 갈 것 같아요</title>
+      <link>https://yeouidobar.com/visit-reviews/after-work-party/</link>
+      <guid isPermaLink="true">https://yeouidobar.com/visit-reviews/after-work-party/</guid>
+      <pubDate>Wed, 30 Apr 2026 18:00:00 +0900</pubDate>
+      <dc:creator>김민준</dc:creator>
+      <category>방문 후기</category>
+      <category>회식 2차</category>
+      <description>마포구 공덕 회식 1차 후 동료 4명과 토킹바 룸을 이용했습니다. 여의도역 3번 출구 도보 3분 안내 그대로였고, 방음이 잘 돼 옆 룸 소리가 들리지 않았습니다. 매니저 응대가 강요·재촉 없이 자연스러웠고, 카카오톡으로 미리 받은 견적이 정확했습니다.</description>
+    </item>
+
+    <item>
+      <title>거래처 미팅 자리로 3번째 — 분위기 안정적, 비즈니스에 잘 맞아요</title>
+      <link>https://yeouidobar.com/visit-reviews/client-meeting/</link>
+      <guid isPermaLink="true">https://yeouidobar.com/visit-reviews/client-meeting/</guid>
+      <pubDate>Sat, 18 Apr 2026 14:00:00 +0900</pubDate>
+      <dc:creator>박서연</dc:creator>
+      <category>방문 후기</category>
+      <category>거래처 미팅</category>
+      <description>거래처 미팅에서 가장 신경 쓰이는 옆 자리 소음이 방음 룸으로 해결되었고, 매니저가 호출 전까지 들어오지 않아 자료를 펴고 대화하기 좋았습니다. 견적이 카카오톡 안내와 정확히 일치하고 법인카드 세금계산서 발행도 가능합니다.</description>
+    </item>
+
+    <!-- 공지사항 (최신 3건) -->
+    <item>
+      <title>매장 홈페이지 정식 오픈 안내</title>
+      <link>https://yeouidobar.com/notice/</link>
+      <guid isPermaLink="false">https://yeouidobar.com/notice/#opening</guid>
+      <pubDate>Fri, 15 May 2026 09:00:00 +0900</pubDate>
+      <category>공지사항</category>
+      <description>여의도 라운지 공식 홈페이지가 정식 오픈되었습니다. 매장 안내, 지역별 오시는 길, 모임·회식 안내, 이용 가이드, 자주 묻는 질문까지 한곳에서 확인하실 수 있습니다. 예약·문의는 카카오톡 채널이 가장 빠릅니다.</description>
+    </item>
+
+    <item>
+      <title>카카오톡 채널 빠른 응답 시간 안내</title>
+      <link>https://yeouidobar.com/notice/</link>
+      <guid isPermaLink="false">https://yeouidobar.com/notice/#kakao-response</guid>
+      <pubDate>Sun, 10 May 2026 09:00:00 +0900</pubDate>
+      <category>공지사항</category>
+      <category>예약</category>
+      <description>카카오톡 채널 메시지는 영업 시간(18:00~04:00) 중 평균 3분 이내에 응답드립니다. 그 외 시간에 남겨주신 메시지는 영업 시작 시점에 일괄 답변드립니다.</description>
+    </item>
+
+    <item>
+      <title>단체 예약 사전 안내 권장 시간 변경</title>
+      <link>https://yeouidobar.com/notice/</link>
+      <guid isPermaLink="false">https://yeouidobar.com/notice/#group-booking</guid>
+      <pubDate>Fri, 01 May 2026 09:00:00 +0900</pubDate>
+      <category>공지사항</category>
+      <category>예약</category>
+      <description>단체 예약(6인 이상) 사전 안내 권장 시간이 최소 24시간 전으로 변경되었습니다. 룸 배치 조율과 자리 준비를 위해 미리 카카오톡으로 인원·시간을 알려주시면 가장 매끄럽게 진행됩니다.</description>
+    </item>
+
+    <!-- 이벤트 (진행 중 2건) -->
+    <item>
+      <title>첫 방문 손님 안내 (상시)</title>
+      <link>https://yeouidobar.com/events/</link>
+      <guid isPermaLink="false">https://yeouidobar.com/events/#first-visit</guid>
+      <pubDate>Mon, 01 Apr 2026 18:00:00 +0900</pubDate>
+      <category>이벤트</category>
+      <description>여의도 라운지를 처음 방문하시는 분께 매니저가 룸·메뉴를 친절히 안내해 드립니다. 강요나 부담 없이 자리를 즐기실 수 있도록 응대 방식이 설계되어 있어, 처음 방문하시는 분도 어렵지 않게 이용하실 수 있습니다.</description>
+    </item>
+
+    <item>
+      <title>단체 예약 사전 안내 (6인 이상)</title>
+      <link>https://yeouidobar.com/events/</link>
+      <guid isPermaLink="false">https://yeouidobar.com/events/#group-pre-booking</guid>
+      <pubDate>Mon, 01 Apr 2026 18:00:00 +0900</pubDate>
+      <category>이벤트</category>
+      <description>6인 이상 단체 예약은 24시간 전 카카오톡으로 인원·시간·1차 종료 예상 시간을 알려주시면 룸 배치를 사전에 조율해 드립니다. 회식 2차 자리, 부서 모임에 가장 매끄럽게 진행할 수 있는 방식입니다.</description>
+    </item>
+
+  </channel>
+</rss>
