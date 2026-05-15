@@ -1829,7 +1829,7 @@ h2.review-title {
 
   .mobile-cta-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0;
     position: fixed;
     bottom: 0;
