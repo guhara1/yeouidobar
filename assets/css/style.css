@@ -899,6 +899,78 @@ ul, ol { list-style: none; }
   flex-wrap: wrap;
 }
 
+/* ============ 404 PAGE ============ */
+.error-page {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(212, 173, 106, 0.12) 0%, transparent 60%),
+    var(--bg);
+  text-align: center;
+}
+.error-inner { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+.error-code {
+  font-size: clamp(96px, 18vw, 180px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 50%, var(--accent-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
+}
+.error-title {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.error-text {
+  font-size: 16px;
+  color: var(--text-soft);
+  line-height: 1.85;
+  margin-bottom: 40px;
+}
+.error-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.error-links {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.error-links h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.error-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+  list-style: none;
+  padding: 0;
+}
+.error-links a {
+  font-size: 14px;
+  color: var(--text-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.error-links a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-dark); }
+
 /* ============ REVIEW DETAIL ============ */
 .review-detail {
   max-width: 880px;
