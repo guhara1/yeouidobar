@@ -971,6 +971,118 @@ ul, ol { list-style: none; }
 }
 .error-links a:hover { color: var(--accent-bright); border-bottom-color: var(--accent-dark); }
 
+/* ============ SINGLE REVIEW PAGE NAVIGATION ============ */
+.review-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin-bottom: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.review-back-link::before {
+  content: '←';
+  font-size: 18px;
+  color: var(--accent);
+  transition: transform var(--transition);
+}
+.review-back-link:hover {
+  border-color: var(--accent-dark);
+  color: var(--accent-bright);
+  background: var(--bg-card-hover);
+}
+.review-back-link:hover::before { transform: translateX(-3px); }
+
+.review-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 880px;
+  margin: 48px auto 0;
+}
+.review-pager a {
+  display: block;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all var(--transition);
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.review-pager a:hover {
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+  background: var(--bg-card-hover);
+}
+.review-pager .pager-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.review-pager .pager-prev .pager-label::before {
+  content: '←';
+  color: var(--accent);
+  font-size: 16px;
+}
+.review-pager .pager-next {
+  text-align: right;
+}
+.review-pager .pager-next .pager-label {
+  justify-content: flex-end;
+}
+.review-pager .pager-next .pager-label::after {
+  content: '→';
+  color: var(--accent);
+  font-size: 16px;
+}
+.review-pager .pager-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-pager .pager-empty {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text-dim);
+  text-align: center;
+  font-size: 13px;
+  cursor: default;
+}
+.review-pager .pager-empty:hover {
+  transform: none;
+  border-color: var(--border);
+  background: transparent;
+}
+
+@media (max-width: 640px) {
+  .review-pager { grid-template-columns: 1fr; }
+  .review-pager .pager-next { text-align: left; }
+  .review-pager .pager-next .pager-label { justify-content: flex-start; }
+}
+
 /* ============ REVIEW PAGE — ALBUM & MAGAZINE ============ */
 
 /* 상단 요약 통계 */
@@ -1275,7 +1387,9 @@ ul, ol { list-style: none; }
   -webkit-text-fill-color: transparent;
 }
 
-/* H2 review-title — 매거진 큰 헤드라인 */
+/* review-title — 매거진 큰 헤드라인 (h1/h2 모두 동일 스타일) */
+.review-title,
+h1.review-title,
 h2.review-title {
   font-size: clamp(24px, 3.4vw, 34px);
   font-weight: 900;
