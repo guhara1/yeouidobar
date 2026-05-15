@@ -899,6 +899,63 @@ ul, ol { list-style: none; }
   flex-wrap: wrap;
 }
 
+/* ============ LEGAL PAGES ============ */
+.legal-list {
+  max-width: 820px;
+  list-style: none;
+  counter-reset: legal-counter;
+  margin-top: 12px;
+}
+.legal-list > li {
+  position: relative;
+  padding: 6px 0 6px 32px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--text-soft);
+  line-height: 1.85;
+  counter-increment: legal-counter;
+}
+.legal-list > li::before {
+  content: counter(legal-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.legal-list > li > ul {
+  margin-top: 8px;
+  list-style: none;
+  padding-left: 0;
+}
+.legal-list > li > ul > li {
+  position: relative;
+  padding: 4px 0 4px 18px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.legal-list > li > ul > li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--accent-dark);
+}
+
+.legal-meta {
+  margin-top: 36px;
+  padding: 22px 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-dim);
+  max-width: 820px;
+  line-height: 1.8;
+}
+.legal-meta strong { color: var(--text); }
+.legal-meta p { margin-bottom: 4px; }
+
 /* ============ REGION PAGES ============ */
 .breadcrumb {
   padding: 28px 0 0;
