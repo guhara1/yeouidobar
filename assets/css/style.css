@@ -1817,6 +1817,103 @@ h2.review-title {
   .review-helpful-bar { padding: 16px 22px; }
 }
 
+/* ============ MOBILE STICKY CTA BAR ============ */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding-bottom: 72px;
+  }
+
+  .mobile-cta-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    background: rgba(10, 10, 10, 0.94);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-top: 1px solid rgba(212, 173, 106, 0.32);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.55);
+    height: 64px;
+    overflow: hidden;
+  }
+  .mobile-cta-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--accent-bright) 50%,
+      transparent 100%);
+    z-index: 1;
+  }
+
+  .mobile-cta-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: all 0.18s ease;
+    position: relative;
+    padding: 0 14px;
+  }
+  .mobile-cta-bar a:active { transform: scale(0.96); }
+
+  .mobile-cta-bar .cta-phone {
+    background: linear-gradient(135deg, #e6c084 0%, #c9a961 50%, #a8854a 100%);
+    color: #1a1410;
+  }
+  .mobile-cta-bar .cta-kakao {
+    background: linear-gradient(135deg, #fee500 0%, #f2da00 100%);
+    color: #1a1410;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-cta-bar .cta-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+  }
+  .mobile-cta-bar .cta-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+    gap: 1px;
+  }
+  .mobile-cta-bar .cta-label strong {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  .mobile-cta-bar .cta-label small {
+    font-size: 10.5px;
+    font-weight: 700;
+    opacity: 0.78;
+    font-feature-settings: 'tnum';
+    letter-spacing: 0.01em;
+  }
+}
+
+/* iOS Safari 하단 safe area 대응 */
+@supports (padding: max(0px)) {
+  @media (max-width: 720px) {
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+    .mobile-cta-bar { padding-bottom: env(safe-area-inset-bottom); }
+  }
+}
+
 /* ============ FOOTER (SEO 강화 v2) ============ */
 .site-footer {
   background: #050505;
