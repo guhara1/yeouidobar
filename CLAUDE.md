@@ -92,7 +92,7 @@
   "@type": "BarOrPub",
   "@id": "https://yeouidobar.com/#business",
   "name": "여의도 라운지",
-  "telephone": "+82-10-3431-0531",
+  "telephone": "+82-10-5969-5031",
   "address": { "@type": "PostalAddress", ... },
   "openingHoursSpecification": [{ "opens": "18:00", "closes": "04:00", ... }]
 }
@@ -149,7 +149,7 @@
 - 대표명: "홍길동" (placeholder)
 - 주소: "여의도동 00-00" (placeholder)
 - 사업자번호: "000-00-00000" (placeholder)
-- 전화: **010-3431-0531** (실제 번호)
+- 전화: **010-5969-5031** (실제 번호)
 - 카톡 채널: `https://pf.kakao.com/_xxxxxx` (placeholder)
 - 도메인: `yeouidobar.com` (실제) / Schema·canonical 일부에 `yeouidobar.example.com` 남아있음 → 전부 `yeouidobar.com`으로 일괄 교체 권장
 
